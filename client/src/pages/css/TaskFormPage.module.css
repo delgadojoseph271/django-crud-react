@@ -1,0 +1,18 @@
+.form{
+    padding: 20px;
+    background-color: #000000;
+    margin: 10px;
+    display: block;
+    border: 10px solid red;
+}
+.saveButton {
+    padding: 10 px;
+    color: white;
+    background-color: green;
+}
+
+.deleteButton {
+    padding: 10px;
+    color: white;
+    background-color: red;
+}
