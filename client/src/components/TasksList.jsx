@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllTask } from "../api/tasks.api";
 import { TaskCard } from "./TaskCard";
+import style from './css/TasksList.module.css'
 
 export function TasksList() {
 
@@ -16,9 +17,9 @@ export function TasksList() {
 
 
   return(
-  <div>
+  <div className={style.TasksListContainer}>
     {tasks.map(task =>(
-      <TaskCard key={task.id} task={task}/>
+        <TaskCard key={task.id} task={task} />
     ))}
   </div>
   );
