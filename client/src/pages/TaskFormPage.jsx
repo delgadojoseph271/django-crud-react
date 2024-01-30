@@ -16,7 +16,7 @@ export function TasksFormPage() {
     const navigate = useNavigate()
     const params = useParams()
 
-    const onSubmit = handleSubmit(async (data) => {
+    const onSubmit = handleSubmit(async (data) => { 
       if (params.id){
         console.log('actualizando')
         await updateTask(params.id, data)
@@ -29,7 +29,7 @@ export function TasksFormPage() {
     })
 
     useEffect(() => {
-       async function loadTask() {
+      async function loadTask() {
         if (params.id) {
           const res = await getTask(params.id)
           setValue('title', res.data.title)

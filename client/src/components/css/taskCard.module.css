@@ -1,4 +1,8 @@
 .taskCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     box-sizing: border-box;
     border: 1px solid #ffffff; 
     margin: 15px;
@@ -26,3 +30,4 @@
     -webkit-backdrop-filter: blur(4.2px);
     border: 1px solid rgba(255, 255, 255, 0.74);
 }
+
