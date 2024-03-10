@@ -1,6 +1,7 @@
+import { TasksList } from "../components/TasksList"
 
 export function TaskListDone() {
   return (
-    <div>TaskListDone</div>
+    <TasksList filterCompleted={true}/>
   )
 }

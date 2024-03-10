@@ -10,9 +10,10 @@ export function TaskCard({ task }) {
   const handleCheckboxChange = async () => {
     try {
       const updatedTask = {
-        title: task.title,  // Asegúrate de proporcionar un valor válido para "title"
+        title: task.title,  
         done: event.target.checked,
-      };      await updateTask(task.id, updatedTask);
+      };      
+      await updateTask(task.id, updatedTask);
       setIsChecked(!isChecked);
     } catch (error) {
       console.error('Error al actualizar la tarea:', error);

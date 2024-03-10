@@ -43,6 +43,7 @@ export function TasksFormPage() {
       <div>
         <form onSubmit={onSubmit} className={styles.form}>
           <input 
+          className={styles.title}
             type="text"
             placeholder="title" 
             {...register('title', { required:true })}
@@ -53,19 +54,22 @@ export function TasksFormPage() {
           <textarea 
             placeholder="Description"
             {...register('description', { required:true })}
+            className={styles.description}
           ></textarea>
             {errors.description && <span>This field is required</span>}
+            
+            <div className={styles.buttonBox}>
+              <button className={styles.saveButton}>Save</button>
 
-          <button className={styles.saveButton}>Save</button>
-
-          {params.id && 
-            <button className={styles.deleteButton}
-              onClick={async() => {
-                const accepted = window.confirm('are you sure?')
-                if (accepted){
-                  await deleteTask(params.id)
-                }
-          }}>Delete</button>}
+              {params.id && 
+                <button className={styles.deleteButton}
+                  onClick={async() => {
+                    const accepted = window.confirm('are you sure?')
+                    if (accepted){
+                      await deleteTask(params.id)
+                    }
+              }}>Delete</button>}
+          </div>
         </form>
       </div>
     )
